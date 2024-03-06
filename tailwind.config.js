@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{vue,ts,html,js}"],
+module.exports = {
+  darkMode: 'class',
+  content: [
+    './templates/**/*.jinja',
+    './node_modules/flowbite/**/*.js'
+  ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 
